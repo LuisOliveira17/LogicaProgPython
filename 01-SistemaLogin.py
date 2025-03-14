@@ -27,11 +27,19 @@ def MenuPrincipal():
     print("|2-Login de Usuario |")
     print("|3-Sair             |")
     print("|-------------------|")
-    resposta=int(input("O que deseja fazer:"))
-    if resposta==1:
-        CadastroUsuario()
-    if resposta==2:
-        LoginUsuario()
 
+MenuPrincipal()
+while True:
+    resposta = int(input("Digite 1, 2 ou 3 para continuar (Digite 3 para sair): "))
+    
+    if resposta == 3:
+        print("Saindo...")
+        break  # Sai do loop quando a resposta for 3
+    elif resposta == 1:
+        print("Você escolheu 1!")
+    elif resposta == 2:
+        print("Você escolheu 2!")
+    else:
+        print("Opção inválida! Tente novamente.")
 
 MenuPrincipal()
